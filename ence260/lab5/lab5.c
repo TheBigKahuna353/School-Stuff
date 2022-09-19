@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
 
 
 // int main(void)
@@ -25,7 +27,8 @@
 //     } while (c != EOF);
 // }
 
-size_t readString(char* string, size_t maxStringLength) {
+size_t readString(char* string, size_t maxStringLength)
+{
     size_t len = 0;
     int c;
     while (1) {
@@ -41,33 +44,82 @@ size_t readString(char* string, size_t maxStringLength) {
     }
 }
 
-FILE* openInputFile(char* filename)
+size_t readStringFile(FILE* file, char* string, size_t maxStringLength)
 {
-    FILE* f = fopen(filename, "r");
-    if (f == NULL) {
-        printf("Input file can't be opened");
+    size_t len = 0;
+    int c;
+    while (1) {
+        c = getc(file);
+        if (c == EOF || len >= maxStringLength) {
+            for (int i = len; i < maxStringLength; i++) {
+                string[i] = 0;
+            }
+            return len;
+        }
+        string[len] = c;
+        len++;
     }
-    return f;
 }
 
-int main(void) {
-    char filename[80];
-    readString(filename, 80);
-    FILE* f = openInputFile(filename);
-    if (f == NULL) {
-        return 0;
+FILE* openInputFile(char* filename)
+{
+    FILE* file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Input file can't be opened\n");
     }
-    char c = getchar();
-    char* data;
-    int total = 0;
-    int err = fscanf(f, data);
-    fclose(f);
-    printf("%d", err);
-    printf("data?");
-    for (int i = 0; i < strlen(data); i++) {
-        if (data[i] == c) {
-            total++;
-        }
+    return file;
+}
+
+FILE* openOutputFile(char* filename)
+{
+    FILE* file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("Output file can't be opened\n");
     }
-    printf("sddfs%d", total);
+    return file;
+}
+
+
+// int main(void)
+// {
+//     char inputName[80];
+//     char outputName[80];
+
+//     readString(inputName, 80);
+//     readString(outputName, 80);
+
+//     FILE* inputFile = openInputFile(inputName);
+//     FILE* outputFile = openOutputFile(outputName);
+//     if (inputFile == NULL || outputFile == NULL) {
+//         if (inputFile != NULL) {
+//             fclose(inputFile);
+//         } else if (outputFile != NULL) {
+//             fclose(outputFile);
+//         }
+//         return 1;
+//     }
+
+//     char c = getc(inputFile);
+//     bool toUp = true;
+//     do {
+//         if (c == ' ' || c == '\n') {
+//             toUp = true;
+//         } else if (toUp) {
+//             c = toupper(c);
+//             toUp = false;
+//         } else {
+//             c = tolower(c);
+//         }
+//         putc(c, outputFile);
+//         c = getc(inputFile);
+//     } while (c != EOF);
+//     fclose(inputFile);
+//     fclose(outputFile);
+// }
+
+int main(int argc, char** argv)
+{
+    for (int i = 0; i < argc; i++) {
+        printf("[%d] %s", i, argv[i]);
+    }
 }
