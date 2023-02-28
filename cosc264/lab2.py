@@ -54,4 +54,5 @@ def avg_trials_from_ber(bit_error_probability, packet_length_b):
     """
     return average_trials(per_from_ber(bit_error_probability, packet_length_b))
 
-print(avg_trials_from_ber(0.001, 2000))
+# print(avg_trials_from_ber(0.001, 2000))
+print(0.2*(0.8)**2)
