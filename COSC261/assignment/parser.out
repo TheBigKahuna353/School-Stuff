@@ -1,0 +1,1187 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> Program
+Rule 1     Program -> Statements
+Rule 2     Statements -> Statement
+Rule 3     Statements -> Statements SEM Statement
+Rule 4     Statement -> If
+Rule 5     Statement -> While
+Rule 6     Statement -> Assignment
+Rule 7     Statement -> Write
+Rule 8     Statement -> Read
+Rule 9     If -> IF boolean_expression THEN Statements END
+Rule 10    If -> IF boolean_expression THEN Statements ELSE Statements END
+Rule 11    While -> WHILE boolean_expression DO Statements END
+Rule 12    Assignment -> Id BEC Expression
+Rule 13    Write -> WRITE Expression
+Rule 14    Read -> READ Id
+Rule 15    Comparison -> Expression Relation Expression
+Rule 16    boolean_expression -> boolean_term
+Rule 17    boolean_expression -> boolean_expression OR boolean_term
+Rule 18    boolean_term -> boolean_factor
+Rule 19    boolean_term -> boolean_term AND boolean_factor
+Rule 20    boolean_factor -> NOT boolean_factor
+Rule 21    boolean_factor -> Comparison
+Rule 22    Relation -> EQ
+Rule 23    Relation -> NEQ
+Rule 24    Relation -> LESS
+Rule 25    Relation -> LEQ
+Rule 26    Relation -> GRTR
+Rule 27    Relation -> GEQ
+Rule 28    Expression -> Expression ADD Expression
+Rule 29    Expression -> Expression SUB Expression
+Rule 30    Expression -> Expression MUL Expression
+Rule 31    Expression -> Expression DIV Expression
+Rule 32    Expression -> LPAR Expression RPAR
+Rule 33    Expression -> NUM
+Rule 34    Expression -> Id
+Rule 35    Id -> ID
+
+Terminals, with rules where they appear
+
+ADD                  : 28
+AND                  : 19
+BEC                  : 12
+DIV                  : 31
+DO                   : 11
+ELSE                 : 10
+END                  : 9 10 11
+EQ                   : 22
+GEQ                  : 27
+GRTR                 : 26
+ID                   : 35
+IF                   : 9 10
+LEQ                  : 25
+LESS                 : 24
+LPAR                 : 32
+MUL                  : 30
+NEQ                  : 23
+NOT                  : 20
+NUM                  : 33
+OR                   : 17
+READ                 : 14
+RPAR                 : 32
+SEM                  : 3
+SUB                  : 29
+THEN                 : 9 10
+WHILE                : 11
+WRITE                : 13
+error                : 
+
+Nonterminals, with rules where they appear
+
+Assignment           : 6
+Comparison           : 21
+Expression           : 12 13 15 15 28 28 29 29 30 30 31 31 32
+Id                   : 12 14 34
+If                   : 4
+Program              : 0
+Read                 : 8
+Relation             : 15
+Statement            : 2 3
+Statements           : 1 3 9 10 10 11
+While                : 5
+Write                : 7
+boolean_expression   : 9 10 11 17
+boolean_factor       : 18 19 20
+boolean_term         : 16 17 19
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Program
+    (1) Program -> . Statements
+    (2) Statements -> . Statement
+    (3) Statements -> . Statements SEM Statement
+    (4) Statement -> . If
+    (5) Statement -> . While
+    (6) Statement -> . Assignment
+    (7) Statement -> . Write
+    (8) Statement -> . Read
+    (9) If -> . IF boolean_expression THEN Statements END
+    (10) If -> . IF boolean_expression THEN Statements ELSE Statements END
+    (11) While -> . WHILE boolean_expression DO Statements END
+    (12) Assignment -> . Id BEC Expression
+    (13) Write -> . WRITE Expression
+    (14) Read -> . READ Id
+    (35) Id -> . ID
+
+    IF              shift and go to state 9
+    WHILE           shift and go to state 10
+    WRITE           shift and go to state 12
+    READ            shift and go to state 13
+    ID              shift and go to state 14
+
+    Program                        shift and go to state 1
+    Statements                     shift and go to state 2
+    Statement                      shift and go to state 3
+    If                             shift and go to state 4
+    While                          shift and go to state 5
+    Assignment                     shift and go to state 6
+    Write                          shift and go to state 7
+    Read                           shift and go to state 8
+    Id                             shift and go to state 11
+
+state 1
+
+    (0) S' -> Program .
+
+
+
+state 2
+
+    (1) Program -> Statements .
+    (3) Statements -> Statements . SEM Statement
+
+    $end            reduce using rule 1 (Program -> Statements .)
+    SEM             shift and go to state 15
+
+
+state 3
+
+    (2) Statements -> Statement .
+
+    SEM             reduce using rule 2 (Statements -> Statement .)
+    $end            reduce using rule 2 (Statements -> Statement .)
+    END             reduce using rule 2 (Statements -> Statement .)
+    ELSE            reduce using rule 2 (Statements -> Statement .)
+
+
+state 4
+
+    (4) Statement -> If .
+
+    SEM             reduce using rule 4 (Statement -> If .)
+    $end            reduce using rule 4 (Statement -> If .)
+    END             reduce using rule 4 (Statement -> If .)
+    ELSE            reduce using rule 4 (Statement -> If .)
+
+
+state 5
+
+    (5) Statement -> While .
+
+    SEM             reduce using rule 5 (Statement -> While .)
+    $end            reduce using rule 5 (Statement -> While .)
+    END             reduce using rule 5 (Statement -> While .)
+    ELSE            reduce using rule 5 (Statement -> While .)
+
+
+state 6
+
+    (6) Statement -> Assignment .
+
+    SEM             reduce using rule 6 (Statement -> Assignment .)
+    $end            reduce using rule 6 (Statement -> Assignment .)
+    END             reduce using rule 6 (Statement -> Assignment .)
+    ELSE            reduce using rule 6 (Statement -> Assignment .)
+
+
+state 7
+
+    (7) Statement -> Write .
+
+    SEM             reduce using rule 7 (Statement -> Write .)
+    $end            reduce using rule 7 (Statement -> Write .)
+    END             reduce using rule 7 (Statement -> Write .)
+    ELSE            reduce using rule 7 (Statement -> Write .)
+
+
+state 8
+
+    (8) Statement -> Read .
+
+    SEM             reduce using rule 8 (Statement -> Read .)
+    $end            reduce using rule 8 (Statement -> Read .)
+    END             reduce using rule 8 (Statement -> Read .)
+    ELSE            reduce using rule 8 (Statement -> Read .)
+
+
+state 9
+
+    (9) If -> IF . boolean_expression THEN Statements END
+    (10) If -> IF . boolean_expression THEN Statements ELSE Statements END
+    (16) boolean_expression -> . boolean_term
+    (17) boolean_expression -> . boolean_expression OR boolean_term
+    (18) boolean_term -> . boolean_factor
+    (19) boolean_term -> . boolean_term AND boolean_factor
+    (20) boolean_factor -> . NOT boolean_factor
+    (21) boolean_factor -> . Comparison
+    (15) Comparison -> . Expression Relation Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    NOT             shift and go to state 19
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    boolean_expression             shift and go to state 16
+    boolean_term                   shift and go to state 17
+    boolean_factor                 shift and go to state 18
+    Comparison                     shift and go to state 20
+    Expression                     shift and go to state 21
+    Id                             shift and go to state 24
+
+state 10
+
+    (11) While -> WHILE . boolean_expression DO Statements END
+    (16) boolean_expression -> . boolean_term
+    (17) boolean_expression -> . boolean_expression OR boolean_term
+    (18) boolean_term -> . boolean_factor
+    (19) boolean_term -> . boolean_term AND boolean_factor
+    (20) boolean_factor -> . NOT boolean_factor
+    (21) boolean_factor -> . Comparison
+    (15) Comparison -> . Expression Relation Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    NOT             shift and go to state 19
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    boolean_expression             shift and go to state 25
+    boolean_term                   shift and go to state 17
+    boolean_factor                 shift and go to state 18
+    Comparison                     shift and go to state 20
+    Expression                     shift and go to state 21
+    Id                             shift and go to state 24
+
+state 11
+
+    (12) Assignment -> Id . BEC Expression
+
+    BEC             shift and go to state 26
+
+
+state 12
+
+    (13) Write -> WRITE . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 27
+    Id                             shift and go to state 24
+
+state 13
+
+    (14) Read -> READ . Id
+    (35) Id -> . ID
+
+    ID              shift and go to state 14
+
+    Id                             shift and go to state 28
+
+state 14
+
+    (35) Id -> ID .
+
+    BEC             reduce using rule 35 (Id -> ID .)
+    ADD             reduce using rule 35 (Id -> ID .)
+    SUB             reduce using rule 35 (Id -> ID .)
+    MUL             reduce using rule 35 (Id -> ID .)
+    DIV             reduce using rule 35 (Id -> ID .)
+    EQ              reduce using rule 35 (Id -> ID .)
+    NEQ             reduce using rule 35 (Id -> ID .)
+    LESS            reduce using rule 35 (Id -> ID .)
+    LEQ             reduce using rule 35 (Id -> ID .)
+    GRTR            reduce using rule 35 (Id -> ID .)
+    GEQ             reduce using rule 35 (Id -> ID .)
+    SEM             reduce using rule 35 (Id -> ID .)
+    $end            reduce using rule 35 (Id -> ID .)
+    END             reduce using rule 35 (Id -> ID .)
+    ELSE            reduce using rule 35 (Id -> ID .)
+    RPAR            reduce using rule 35 (Id -> ID .)
+    AND             reduce using rule 35 (Id -> ID .)
+    THEN            reduce using rule 35 (Id -> ID .)
+    OR              reduce using rule 35 (Id -> ID .)
+    DO              reduce using rule 35 (Id -> ID .)
+
+
+state 15
+
+    (3) Statements -> Statements SEM . Statement
+    (4) Statement -> . If
+    (5) Statement -> . While
+    (6) Statement -> . Assignment
+    (7) Statement -> . Write
+    (8) Statement -> . Read
+    (9) If -> . IF boolean_expression THEN Statements END
+    (10) If -> . IF boolean_expression THEN Statements ELSE Statements END
+    (11) While -> . WHILE boolean_expression DO Statements END
+    (12) Assignment -> . Id BEC Expression
+    (13) Write -> . WRITE Expression
+    (14) Read -> . READ Id
+    (35) Id -> . ID
+
+    IF              shift and go to state 9
+    WHILE           shift and go to state 10
+    WRITE           shift and go to state 12
+    READ            shift and go to state 13
+    ID              shift and go to state 14
+
+    Statement                      shift and go to state 29
+    If                             shift and go to state 4
+    While                          shift and go to state 5
+    Assignment                     shift and go to state 6
+    Write                          shift and go to state 7
+    Read                           shift and go to state 8
+    Id                             shift and go to state 11
+
+state 16
+
+    (9) If -> IF boolean_expression . THEN Statements END
+    (10) If -> IF boolean_expression . THEN Statements ELSE Statements END
+    (17) boolean_expression -> boolean_expression . OR boolean_term
+
+    THEN            shift and go to state 30
+    OR              shift and go to state 31
+
+
+state 17
+
+    (16) boolean_expression -> boolean_term .
+    (19) boolean_term -> boolean_term . AND boolean_factor
+
+    THEN            reduce using rule 16 (boolean_expression -> boolean_term .)
+    OR              reduce using rule 16 (boolean_expression -> boolean_term .)
+    DO              reduce using rule 16 (boolean_expression -> boolean_term .)
+    AND             shift and go to state 32
+
+
+state 18
+
+    (18) boolean_term -> boolean_factor .
+
+    AND             reduce using rule 18 (boolean_term -> boolean_factor .)
+    THEN            reduce using rule 18 (boolean_term -> boolean_factor .)
+    OR              reduce using rule 18 (boolean_term -> boolean_factor .)
+    DO              reduce using rule 18 (boolean_term -> boolean_factor .)
+
+
+state 19
+
+    (20) boolean_factor -> NOT . boolean_factor
+    (20) boolean_factor -> . NOT boolean_factor
+    (21) boolean_factor -> . Comparison
+    (15) Comparison -> . Expression Relation Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    NOT             shift and go to state 19
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    boolean_factor                 shift and go to state 33
+    Comparison                     shift and go to state 20
+    Expression                     shift and go to state 21
+    Id                             shift and go to state 24
+
+state 20
+
+    (21) boolean_factor -> Comparison .
+
+    AND             reduce using rule 21 (boolean_factor -> Comparison .)
+    THEN            reduce using rule 21 (boolean_factor -> Comparison .)
+    OR              reduce using rule 21 (boolean_factor -> Comparison .)
+    DO              reduce using rule 21 (boolean_factor -> Comparison .)
+
+
+state 21
+
+    (15) Comparison -> Expression . Relation Expression
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+    (22) Relation -> . EQ
+    (23) Relation -> . NEQ
+    (24) Relation -> . LESS
+    (25) Relation -> . LEQ
+    (26) Relation -> . GRTR
+    (27) Relation -> . GEQ
+
+    ADD             shift and go to state 35
+    SUB             shift and go to state 36
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+    EQ              shift and go to state 39
+    NEQ             shift and go to state 40
+    LESS            shift and go to state 41
+    LEQ             shift and go to state 42
+    GRTR            shift and go to state 43
+    GEQ             shift and go to state 44
+
+    Relation                       shift and go to state 34
+
+state 22
+
+    (32) Expression -> LPAR . Expression RPAR
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 45
+    Id                             shift and go to state 24
+
+state 23
+
+    (33) Expression -> NUM .
+
+    ADD             reduce using rule 33 (Expression -> NUM .)
+    SUB             reduce using rule 33 (Expression -> NUM .)
+    MUL             reduce using rule 33 (Expression -> NUM .)
+    DIV             reduce using rule 33 (Expression -> NUM .)
+    EQ              reduce using rule 33 (Expression -> NUM .)
+    NEQ             reduce using rule 33 (Expression -> NUM .)
+    LESS            reduce using rule 33 (Expression -> NUM .)
+    LEQ             reduce using rule 33 (Expression -> NUM .)
+    GRTR            reduce using rule 33 (Expression -> NUM .)
+    GEQ             reduce using rule 33 (Expression -> NUM .)
+    SEM             reduce using rule 33 (Expression -> NUM .)
+    $end            reduce using rule 33 (Expression -> NUM .)
+    END             reduce using rule 33 (Expression -> NUM .)
+    ELSE            reduce using rule 33 (Expression -> NUM .)
+    RPAR            reduce using rule 33 (Expression -> NUM .)
+    AND             reduce using rule 33 (Expression -> NUM .)
+    THEN            reduce using rule 33 (Expression -> NUM .)
+    OR              reduce using rule 33 (Expression -> NUM .)
+    DO              reduce using rule 33 (Expression -> NUM .)
+
+
+state 24
+
+    (34) Expression -> Id .
+
+    ADD             reduce using rule 34 (Expression -> Id .)
+    SUB             reduce using rule 34 (Expression -> Id .)
+    MUL             reduce using rule 34 (Expression -> Id .)
+    DIV             reduce using rule 34 (Expression -> Id .)
+    EQ              reduce using rule 34 (Expression -> Id .)
+    NEQ             reduce using rule 34 (Expression -> Id .)
+    LESS            reduce using rule 34 (Expression -> Id .)
+    LEQ             reduce using rule 34 (Expression -> Id .)
+    GRTR            reduce using rule 34 (Expression -> Id .)
+    GEQ             reduce using rule 34 (Expression -> Id .)
+    SEM             reduce using rule 34 (Expression -> Id .)
+    $end            reduce using rule 34 (Expression -> Id .)
+    END             reduce using rule 34 (Expression -> Id .)
+    ELSE            reduce using rule 34 (Expression -> Id .)
+    RPAR            reduce using rule 34 (Expression -> Id .)
+    AND             reduce using rule 34 (Expression -> Id .)
+    THEN            reduce using rule 34 (Expression -> Id .)
+    OR              reduce using rule 34 (Expression -> Id .)
+    DO              reduce using rule 34 (Expression -> Id .)
+
+
+state 25
+
+    (11) While -> WHILE boolean_expression . DO Statements END
+    (17) boolean_expression -> boolean_expression . OR boolean_term
+
+    DO              shift and go to state 46
+    OR              shift and go to state 31
+
+
+state 26
+
+    (12) Assignment -> Id BEC . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Id                             shift and go to state 24
+    Expression                     shift and go to state 47
+
+state 27
+
+    (13) Write -> WRITE Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    SEM             reduce using rule 13 (Write -> WRITE Expression .)
+    $end            reduce using rule 13 (Write -> WRITE Expression .)
+    END             reduce using rule 13 (Write -> WRITE Expression .)
+    ELSE            reduce using rule 13 (Write -> WRITE Expression .)
+    ADD             shift and go to state 35
+    SUB             shift and go to state 36
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+
+state 28
+
+    (14) Read -> READ Id .
+
+    SEM             reduce using rule 14 (Read -> READ Id .)
+    $end            reduce using rule 14 (Read -> READ Id .)
+    END             reduce using rule 14 (Read -> READ Id .)
+    ELSE            reduce using rule 14 (Read -> READ Id .)
+
+
+state 29
+
+    (3) Statements -> Statements SEM Statement .
+
+    SEM             reduce using rule 3 (Statements -> Statements SEM Statement .)
+    $end            reduce using rule 3 (Statements -> Statements SEM Statement .)
+    END             reduce using rule 3 (Statements -> Statements SEM Statement .)
+    ELSE            reduce using rule 3 (Statements -> Statements SEM Statement .)
+
+
+state 30
+
+    (9) If -> IF boolean_expression THEN . Statements END
+    (10) If -> IF boolean_expression THEN . Statements ELSE Statements END
+    (2) Statements -> . Statement
+    (3) Statements -> . Statements SEM Statement
+    (4) Statement -> . If
+    (5) Statement -> . While
+    (6) Statement -> . Assignment
+    (7) Statement -> . Write
+    (8) Statement -> . Read
+    (9) If -> . IF boolean_expression THEN Statements END
+    (10) If -> . IF boolean_expression THEN Statements ELSE Statements END
+    (11) While -> . WHILE boolean_expression DO Statements END
+    (12) Assignment -> . Id BEC Expression
+    (13) Write -> . WRITE Expression
+    (14) Read -> . READ Id
+    (35) Id -> . ID
+
+    IF              shift and go to state 9
+    WHILE           shift and go to state 10
+    WRITE           shift and go to state 12
+    READ            shift and go to state 13
+    ID              shift and go to state 14
+
+    Statements                     shift and go to state 48
+    Statement                      shift and go to state 3
+    If                             shift and go to state 4
+    While                          shift and go to state 5
+    Assignment                     shift and go to state 6
+    Write                          shift and go to state 7
+    Read                           shift and go to state 8
+    Id                             shift and go to state 11
+
+state 31
+
+    (17) boolean_expression -> boolean_expression OR . boolean_term
+    (18) boolean_term -> . boolean_factor
+    (19) boolean_term -> . boolean_term AND boolean_factor
+    (20) boolean_factor -> . NOT boolean_factor
+    (21) boolean_factor -> . Comparison
+    (15) Comparison -> . Expression Relation Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    NOT             shift and go to state 19
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    boolean_term                   shift and go to state 49
+    boolean_factor                 shift and go to state 18
+    Comparison                     shift and go to state 20
+    Expression                     shift and go to state 21
+    Id                             shift and go to state 24
+
+state 32
+
+    (19) boolean_term -> boolean_term AND . boolean_factor
+    (20) boolean_factor -> . NOT boolean_factor
+    (21) boolean_factor -> . Comparison
+    (15) Comparison -> . Expression Relation Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    NOT             shift and go to state 19
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    boolean_factor                 shift and go to state 50
+    Comparison                     shift and go to state 20
+    Expression                     shift and go to state 21
+    Id                             shift and go to state 24
+
+state 33
+
+    (20) boolean_factor -> NOT boolean_factor .
+
+    AND             reduce using rule 20 (boolean_factor -> NOT boolean_factor .)
+    THEN            reduce using rule 20 (boolean_factor -> NOT boolean_factor .)
+    OR              reduce using rule 20 (boolean_factor -> NOT boolean_factor .)
+    DO              reduce using rule 20 (boolean_factor -> NOT boolean_factor .)
+
+
+state 34
+
+    (15) Comparison -> Expression Relation . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 51
+    Id                             shift and go to state 24
+
+state 35
+
+    (28) Expression -> Expression ADD . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 52
+    Id                             shift and go to state 24
+
+state 36
+
+    (29) Expression -> Expression SUB . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 53
+    Id                             shift and go to state 24
+
+state 37
+
+    (30) Expression -> Expression MUL . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 54
+    Id                             shift and go to state 24
+
+state 38
+
+    (31) Expression -> Expression DIV . Expression
+    (28) Expression -> . Expression ADD Expression
+    (29) Expression -> . Expression SUB Expression
+    (30) Expression -> . Expression MUL Expression
+    (31) Expression -> . Expression DIV Expression
+    (32) Expression -> . LPAR Expression RPAR
+    (33) Expression -> . NUM
+    (34) Expression -> . Id
+    (35) Id -> . ID
+
+    LPAR            shift and go to state 22
+    NUM             shift and go to state 23
+    ID              shift and go to state 14
+
+    Expression                     shift and go to state 55
+    Id                             shift and go to state 24
+
+state 39
+
+    (22) Relation -> EQ .
+
+    LPAR            reduce using rule 22 (Relation -> EQ .)
+    NUM             reduce using rule 22 (Relation -> EQ .)
+    ID              reduce using rule 22 (Relation -> EQ .)
+
+
+state 40
+
+    (23) Relation -> NEQ .
+
+    LPAR            reduce using rule 23 (Relation -> NEQ .)
+    NUM             reduce using rule 23 (Relation -> NEQ .)
+    ID              reduce using rule 23 (Relation -> NEQ .)
+
+
+state 41
+
+    (24) Relation -> LESS .
+
+    LPAR            reduce using rule 24 (Relation -> LESS .)
+    NUM             reduce using rule 24 (Relation -> LESS .)
+    ID              reduce using rule 24 (Relation -> LESS .)
+
+
+state 42
+
+    (25) Relation -> LEQ .
+
+    LPAR            reduce using rule 25 (Relation -> LEQ .)
+    NUM             reduce using rule 25 (Relation -> LEQ .)
+    ID              reduce using rule 25 (Relation -> LEQ .)
+
+
+state 43
+
+    (26) Relation -> GRTR .
+
+    LPAR            reduce using rule 26 (Relation -> GRTR .)
+    NUM             reduce using rule 26 (Relation -> GRTR .)
+    ID              reduce using rule 26 (Relation -> GRTR .)
+
+
+state 44
+
+    (27) Relation -> GEQ .
+
+    LPAR            reduce using rule 27 (Relation -> GEQ .)
+    NUM             reduce using rule 27 (Relation -> GEQ .)
+    ID              reduce using rule 27 (Relation -> GEQ .)
+
+
+state 45
+
+    (32) Expression -> LPAR Expression . RPAR
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    RPAR            shift and go to state 56
+    ADD             shift and go to state 35
+    SUB             shift and go to state 36
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+
+state 46
+
+    (11) While -> WHILE boolean_expression DO . Statements END
+    (2) Statements -> . Statement
+    (3) Statements -> . Statements SEM Statement
+    (4) Statement -> . If
+    (5) Statement -> . While
+    (6) Statement -> . Assignment
+    (7) Statement -> . Write
+    (8) Statement -> . Read
+    (9) If -> . IF boolean_expression THEN Statements END
+    (10) If -> . IF boolean_expression THEN Statements ELSE Statements END
+    (11) While -> . WHILE boolean_expression DO Statements END
+    (12) Assignment -> . Id BEC Expression
+    (13) Write -> . WRITE Expression
+    (14) Read -> . READ Id
+    (35) Id -> . ID
+
+    IF              shift and go to state 9
+    WHILE           shift and go to state 10
+    WRITE           shift and go to state 12
+    READ            shift and go to state 13
+    ID              shift and go to state 14
+
+    Statements                     shift and go to state 57
+    Statement                      shift and go to state 3
+    If                             shift and go to state 4
+    While                          shift and go to state 5
+    Assignment                     shift and go to state 6
+    Write                          shift and go to state 7
+    Read                           shift and go to state 8
+    Id                             shift and go to state 11
+
+state 47
+
+    (12) Assignment -> Id BEC Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    SEM             reduce using rule 12 (Assignment -> Id BEC Expression .)
+    $end            reduce using rule 12 (Assignment -> Id BEC Expression .)
+    END             reduce using rule 12 (Assignment -> Id BEC Expression .)
+    ELSE            reduce using rule 12 (Assignment -> Id BEC Expression .)
+    ADD             shift and go to state 35
+    SUB             shift and go to state 36
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+
+state 48
+
+    (9) If -> IF boolean_expression THEN Statements . END
+    (10) If -> IF boolean_expression THEN Statements . ELSE Statements END
+    (3) Statements -> Statements . SEM Statement
+
+    END             shift and go to state 58
+    ELSE            shift and go to state 59
+    SEM             shift and go to state 15
+
+
+state 49
+
+    (17) boolean_expression -> boolean_expression OR boolean_term .
+    (19) boolean_term -> boolean_term . AND boolean_factor
+
+    THEN            reduce using rule 17 (boolean_expression -> boolean_expression OR boolean_term .)
+    OR              reduce using rule 17 (boolean_expression -> boolean_expression OR boolean_term .)
+    DO              reduce using rule 17 (boolean_expression -> boolean_expression OR boolean_term .)
+    AND             shift and go to state 32
+
+
+state 50
+
+    (19) boolean_term -> boolean_term AND boolean_factor .
+
+    AND             reduce using rule 19 (boolean_term -> boolean_term AND boolean_factor .)
+    THEN            reduce using rule 19 (boolean_term -> boolean_term AND boolean_factor .)
+    OR              reduce using rule 19 (boolean_term -> boolean_term AND boolean_factor .)
+    DO              reduce using rule 19 (boolean_term -> boolean_term AND boolean_factor .)
+
+
+state 51
+
+    (15) Comparison -> Expression Relation Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    AND             reduce using rule 15 (Comparison -> Expression Relation Expression .)
+    THEN            reduce using rule 15 (Comparison -> Expression Relation Expression .)
+    OR              reduce using rule 15 (Comparison -> Expression Relation Expression .)
+    DO              reduce using rule 15 (Comparison -> Expression Relation Expression .)
+    ADD             shift and go to state 35
+    SUB             shift and go to state 36
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+
+state 52
+
+    (28) Expression -> Expression ADD Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    ADD             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    SUB             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    EQ              reduce using rule 28 (Expression -> Expression ADD Expression .)
+    NEQ             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    LESS            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    LEQ             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    GRTR            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    GEQ             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    SEM             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    $end            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    END             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    ELSE            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    RPAR            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    AND             reduce using rule 28 (Expression -> Expression ADD Expression .)
+    THEN            reduce using rule 28 (Expression -> Expression ADD Expression .)
+    OR              reduce using rule 28 (Expression -> Expression ADD Expression .)
+    DO              reduce using rule 28 (Expression -> Expression ADD Expression .)
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+  ! MUL             [ reduce using rule 28 (Expression -> Expression ADD Expression .) ]
+  ! DIV             [ reduce using rule 28 (Expression -> Expression ADD Expression .) ]
+  ! ADD             [ shift and go to state 35 ]
+  ! SUB             [ shift and go to state 36 ]
+
+
+state 53
+
+    (29) Expression -> Expression SUB Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    ADD             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    SUB             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    EQ              reduce using rule 29 (Expression -> Expression SUB Expression .)
+    NEQ             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    LESS            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    LEQ             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    GRTR            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    GEQ             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    SEM             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    $end            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    END             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    ELSE            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    RPAR            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    AND             reduce using rule 29 (Expression -> Expression SUB Expression .)
+    THEN            reduce using rule 29 (Expression -> Expression SUB Expression .)
+    OR              reduce using rule 29 (Expression -> Expression SUB Expression .)
+    DO              reduce using rule 29 (Expression -> Expression SUB Expression .)
+    MUL             shift and go to state 37
+    DIV             shift and go to state 38
+
+  ! MUL             [ reduce using rule 29 (Expression -> Expression SUB Expression .) ]
+  ! DIV             [ reduce using rule 29 (Expression -> Expression SUB Expression .) ]
+  ! ADD             [ shift and go to state 35 ]
+  ! SUB             [ shift and go to state 36 ]
+
+
+state 54
+
+    (30) Expression -> Expression MUL Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    ADD             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    SUB             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    MUL             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    DIV             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    EQ              reduce using rule 30 (Expression -> Expression MUL Expression .)
+    NEQ             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    LESS            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    LEQ             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    GRTR            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    GEQ             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    SEM             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    $end            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    END             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    ELSE            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    RPAR            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    AND             reduce using rule 30 (Expression -> Expression MUL Expression .)
+    THEN            reduce using rule 30 (Expression -> Expression MUL Expression .)
+    OR              reduce using rule 30 (Expression -> Expression MUL Expression .)
+    DO              reduce using rule 30 (Expression -> Expression MUL Expression .)
+
+  ! ADD             [ shift and go to state 35 ]
+  ! SUB             [ shift and go to state 36 ]
+  ! MUL             [ shift and go to state 37 ]
+  ! DIV             [ shift and go to state 38 ]
+
+
+state 55
+
+    (31) Expression -> Expression DIV Expression .
+    (28) Expression -> Expression . ADD Expression
+    (29) Expression -> Expression . SUB Expression
+    (30) Expression -> Expression . MUL Expression
+    (31) Expression -> Expression . DIV Expression
+
+    ADD             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    SUB             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    MUL             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    DIV             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    EQ              reduce using rule 31 (Expression -> Expression DIV Expression .)
+    NEQ             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    LESS            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    LEQ             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    GRTR            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    GEQ             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    SEM             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    $end            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    END             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    ELSE            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    RPAR            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    AND             reduce using rule 31 (Expression -> Expression DIV Expression .)
+    THEN            reduce using rule 31 (Expression -> Expression DIV Expression .)
+    OR              reduce using rule 31 (Expression -> Expression DIV Expression .)
+    DO              reduce using rule 31 (Expression -> Expression DIV Expression .)
+
+  ! ADD             [ shift and go to state 35 ]
+  ! SUB             [ shift and go to state 36 ]
+  ! MUL             [ shift and go to state 37 ]
+  ! DIV             [ shift and go to state 38 ]
+
+
+state 56
+
+    (32) Expression -> LPAR Expression RPAR .
+
+    ADD             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    SUB             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    MUL             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    DIV             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    EQ              reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    NEQ             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    LESS            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    LEQ             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    GRTR            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    GEQ             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    SEM             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    $end            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    END             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    ELSE            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    RPAR            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    AND             reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    THEN            reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    OR              reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+    DO              reduce using rule 32 (Expression -> LPAR Expression RPAR .)
+
+
+state 57
+
+    (11) While -> WHILE boolean_expression DO Statements . END
+    (3) Statements -> Statements . SEM Statement
+
+    END             shift and go to state 60
+    SEM             shift and go to state 15
+
+
+state 58
+
+    (9) If -> IF boolean_expression THEN Statements END .
+
+    SEM             reduce using rule 9 (If -> IF boolean_expression THEN Statements END .)
+    $end            reduce using rule 9 (If -> IF boolean_expression THEN Statements END .)
+    END             reduce using rule 9 (If -> IF boolean_expression THEN Statements END .)
+    ELSE            reduce using rule 9 (If -> IF boolean_expression THEN Statements END .)
+
+
+state 59
+
+    (10) If -> IF boolean_expression THEN Statements ELSE . Statements END
+    (2) Statements -> . Statement
+    (3) Statements -> . Statements SEM Statement
+    (4) Statement -> . If
+    (5) Statement -> . While
+    (6) Statement -> . Assignment
+    (7) Statement -> . Write
+    (8) Statement -> . Read
+    (9) If -> . IF boolean_expression THEN Statements END
+    (10) If -> . IF boolean_expression THEN Statements ELSE Statements END
+    (11) While -> . WHILE boolean_expression DO Statements END
+    (12) Assignment -> . Id BEC Expression
+    (13) Write -> . WRITE Expression
+    (14) Read -> . READ Id
+    (35) Id -> . ID
+
+    IF              shift and go to state 9
+    WHILE           shift and go to state 10
+    WRITE           shift and go to state 12
+    READ            shift and go to state 13
+    ID              shift and go to state 14
+
+    Statements                     shift and go to state 61
+    Statement                      shift and go to state 3
+    If                             shift and go to state 4
+    While                          shift and go to state 5
+    Assignment                     shift and go to state 6
+    Write                          shift and go to state 7
+    Read                           shift and go to state 8
+    Id                             shift and go to state 11
+
+state 60
+
+    (11) While -> WHILE boolean_expression DO Statements END .
+
+    SEM             reduce using rule 11 (While -> WHILE boolean_expression DO Statements END .)
+    $end            reduce using rule 11 (While -> WHILE boolean_expression DO Statements END .)
+    END             reduce using rule 11 (While -> WHILE boolean_expression DO Statements END .)
+    ELSE            reduce using rule 11 (While -> WHILE boolean_expression DO Statements END .)
+
+
+state 61
+
+    (10) If -> IF boolean_expression THEN Statements ELSE Statements . END
+    (3) Statements -> Statements . SEM Statement
+
+    END             shift and go to state 62
+    SEM             shift and go to state 15
+
+
+state 62
+
+    (10) If -> IF boolean_expression THEN Statements ELSE Statements END .
+
+    SEM             reduce using rule 10 (If -> IF boolean_expression THEN Statements ELSE Statements END .)
+    $end            reduce using rule 10 (If -> IF boolean_expression THEN Statements ELSE Statements END .)
+    END             reduce using rule 10 (If -> IF boolean_expression THEN Statements ELSE Statements END .)
+    ELSE            reduce using rule 10 (If -> IF boolean_expression THEN Statements ELSE Statements END .)
+
