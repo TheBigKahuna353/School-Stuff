@@ -1,0 +1,59 @@
+from student_answer import min_action_value, max_action_value
+
+game_tree = [2, [-3, 1], 4, 1]
+
+action, value = min_action_value(game_tree)
+print("Best action if playing min:", action)
+print("Best guaranteed utility:", value)
+print()
+action, value = max_action_value(game_tree)
+print("Best action if playing max:", action)
+print("Best guaranteed utility:", value)
+
+	
+
+Best action if playing min: 1
+Best guaranteed utility: 1
+
+Best action if playing max: 2
+Best guaranteed utility: 4
+
+from student_answer import min_action_value, max_action_value
+
+game_tree = 3
+
+action, value = min_action_value(game_tree)
+print("Best action if playing min:", action)
+print("Best guaranteed utility:", value)
+print()
+action, value = max_action_value(game_tree)
+print("Best action if playing max:", action)
+print("Best guaranteed utility:", value)
+
+	
+
+Best action if playing min: None
+Best guaranteed utility: 3
+
+Best action if playing max: None
+Best guaranteed utility: 3
+
+from student_answer import min_action_value, max_action_value
+
+game_tree = [1, 2, [3]]
+
+action, value = min_action_value(game_tree)
+print("Best action if playing min:", action)
+print("Best guaranteed utility:", value)
+print()
+action, value = max_action_value(game_tree)
+print("Best action if playing max:", action)
+print("Best guaranteed utility:", value)
+
+	
+
+Best action if playing min: 0
+Best guaranteed utility: 1
+
+Best action if playing max: 2
+Best guaranteed utility: 3
