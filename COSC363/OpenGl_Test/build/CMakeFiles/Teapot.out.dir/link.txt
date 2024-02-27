@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Teapot.out.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Teapot.out.dir/objects.a @CMakeFiles\Teapot.out.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Teapot.out.dir/objects.a -Wl,--no-whole-archive -o Teapot.out.exe -Wl,--out-implib,libTeapot.out.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Teapot.out.dir\linkLibs.rsp

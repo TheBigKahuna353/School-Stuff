@@ -1,59 +1,37 @@
-from student_answer import min_action_value, max_action_value
+from student_answer import roulette_wheel_select
 
-game_tree = [2, [-3, 1], 4, 1]
+population = ['a', 'b']
 
-action, value = min_action_value(game_tree)
-print("Best action if playing min:", action)
-print("Best guaranteed utility:", value)
-print()
-action, value = max_action_value(game_tree)
-print("Best action if playing max:", action)
-print("Best guaranteed utility:", value)
+def fitness(x):
+    return 1 # everyone has the same fitness
+
+for r in [0, 0.33, 0.49999, 0.51, 0.75, 0.99999]:
+    print(roulette_wheel_select(population, fitness, r))
 
 	
 
-Best action if playing min: 1
-Best guaranteed utility: 1
+a
+a
+a
+b
+b
+b
 
-Best action if playing max: 2
-Best guaranteed utility: 4
+from student_answer import roulette_wheel_select
 
-from student_answer import min_action_value, max_action_value
+population = [0, 1, 2]
 
-game_tree = 3
+def fitness(x):
+    return x
 
-action, value = min_action_value(game_tree)
-print("Best action if playing min:", action)
-print("Best guaranteed utility:", value)
-print()
-action, value = max_action_value(game_tree)
-print("Best action if playing max:", action)
-print("Best guaranteed utility:", value)
-
-	
-
-Best action if playing min: None
-Best guaranteed utility: 3
-
-Best action if playing max: None
-Best guaranteed utility: 3
-
-from student_answer import min_action_value, max_action_value
-
-game_tree = [1, 2, [3]]
-
-action, value = min_action_value(game_tree)
-print("Best action if playing min:", action)
-print("Best guaranteed utility:", value)
-print()
-action, value = max_action_value(game_tree)
-print("Best action if playing max:", action)
-print("Best guaranteed utility:", value)
+for r in [0.001, 0.33, 0.34, 0.5, 0.75, 0.99]:
+    print(roulette_wheel_select(population, fitness, r))
 
 	
 
-Best action if playing min: 0
-Best guaranteed utility: 1
-
-Best action if playing max: 2
-Best guaranteed utility: 3
+1
+1
+2
+2
+2
+2

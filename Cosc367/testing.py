@@ -1,4 +1,4 @@
-from lab11 import *
+from lab7 import *
 
 class GetPrint:
     def __init__(self):
@@ -22,7 +22,7 @@ with open(filename, 'r') as f:
     lines = f.readlines()
 
 for i in range(len(lines)-1, -1, -1):
-    lines[i] = lines[i].strip()
+    lines[i] = lines[i].rstrip()
     if "student_answer" in lines[i]:
         lines[i] = "end of output"
     # get rid of blank lines and tabs

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/jorda/Documents/GitHub/School Stuff/COSC363/OpenGl_Test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\Teapot.out.dir\\Teapot.cpp.obj -c \"C:\\Users\\jorda\\Documents\\GitHub\\School Stuff\\COSC363\\OpenGl_Test\\Teapot.cpp\"",
+  "file": "C:/Users/jorda/Documents/GitHub/School Stuff/COSC363/OpenGl_Test/Teapot.cpp",
+  "output": "CMakeFiles/Teapot.out.dir/Teapot.cpp.obj"
+},
+{
+  "directory": "C:/Users/jorda/Documents/GitHub/School Stuff/COSC363/OpenGl_Test/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\Model3d.out.dir\\Model3D.cpp.obj -c \"C:\\Users\\jorda\\Documents\\GitHub\\School Stuff\\COSC363\\OpenGl_Test\\Model3D.cpp\"",
+  "file": "C:/Users/jorda/Documents/GitHub/School Stuff/COSC363/OpenGl_Test/Model3D.cpp",
+  "output": "CMakeFiles/Model3d.out.dir/Model3D.cpp.obj"
+}
+]
