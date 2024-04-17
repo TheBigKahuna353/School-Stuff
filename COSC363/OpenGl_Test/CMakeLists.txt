@@ -7,6 +7,7 @@ add_executable(Model3d.out Model3D.cpp)
 
 
 find_package(OpenGL REQUIRED)
+set(OPENGL_LIBRARY_DIR "C:/Users/jorda/Downloads/winglut")
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
 
