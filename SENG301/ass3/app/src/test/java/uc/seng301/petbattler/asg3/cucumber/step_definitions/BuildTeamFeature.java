@@ -93,12 +93,7 @@ public class BuildTeamFeature {
         doLater = () -> {
             capturedCLIOutput.clear();
             String arg = String.format("bt \"%s\" \"%s\"", player, pack);
-            try {
-                game.buildTeam(arg);
-            } catch (NullPointerException e) {
-                // do nothing, this seems to be a weird bug that seems unfixable
-                // but still allows the test to pass
-            }
+            game.buildTeam(arg);
         };
     }
 
@@ -131,6 +126,8 @@ public class BuildTeamFeature {
     // AC2
     @Then("I am given 5 options to choose")
     public void i_am_given_5_options_to_choose() {
+        mockCLIResponse.clear();
+        mockCLIResponse.add("!q");
         doLater.run();
         // check that 5 options are given
         Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1).contains("[4]"));
@@ -144,6 +141,7 @@ public class BuildTeamFeature {
     public void i_do_not_choose_three_pets() {
         mockCLIResponse.clear();
         mockCLIResponse.add("1 2");
+        mockCLIResponse.add("!q");
     }
 
     // AC3
@@ -159,6 +157,7 @@ public class BuildTeamFeature {
     public void i_choose_the_same_pet_twice() {
         mockCLIResponse.clear();
         mockCLIResponse.add("1 1 1");
+        mockCLIResponse.add("!q");
     }
 
     // AC4
