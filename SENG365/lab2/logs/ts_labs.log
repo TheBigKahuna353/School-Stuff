@@ -331,3 +331,25 @@
 2024-03-06 16:57:47:5747 [35mhttp[39m: [35mGET single user with id 99999999[39m
 2024-03-06 16:57:47:5747 [32minfo[39m: [32mGetting user with id 99999999 from the database[39m
 2024-03-06 16:57:47:5747 [35mhttp[39m: [35mPOST user with username undefined[39m
+2024-04-19 19:18:54:1854 [32minfo[39m: [32mSuccessfully connected to database[39m
+2024-04-19 19:18:54:1854 [32minfo[39m: [32mListening on port: 3000[39m
+2024-04-19 19:19:07:197 [35mhttp[39m: [35mGET all users[39m
+2024-04-19 19:19:07:197 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-19 19:27:57:2757 [35mhttp[39m: [35mGET all users[39m
+2024-04-19 19:27:57:2757 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-19 19:28:02:282 [35mhttp[39m: [35mPOST user with username Tester[39m
+2024-04-19 19:28:02:282 [32minfo[39m: [32mInserting user with username Tester into the database[39m
+2024-04-19 19:28:02:282 [35mhttp[39m: [35mGET all users[39m
+2024-04-19 19:28:02:282 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-22 21:54:05:545 [32minfo[39m: [32mSuccessfully connected to database[39m
+2024-04-22 21:54:05:545 [32minfo[39m: [32mListening on port: 3000[39m
+2024-04-22 21:54:11:5411 [35mhttp[39m: [35mGET all users[39m
+2024-04-22 21:54:11:5411 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-22 21:55:18:5518 [35mhttp[39m: [35mPOST user with username ReactTest[39m
+2024-04-22 21:55:18:5518 [32minfo[39m: [32mInserting user with username ReactTest into the database[39m
+2024-04-22 21:55:19:5519 [35mhttp[39m: [35mGET all users[39m
+2024-04-22 21:55:19:5519 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-22 22:02:01:21 [35mhttp[39m: [35mGET all users[39m
+2024-04-22 22:02:01:21 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-22 22:02:03:23 [35mhttp[39m: [35mDELETE user with id 22[39m
+2024-04-22 22:02:03:23 [32minfo[39m: [32mDeleting user with id 22 from the database[39m

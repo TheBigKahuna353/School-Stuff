@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>My Application</title>
+    </head>
+
+    <body>
+        <div id="root">
+        </div>
+        <!-- Import the React, React-Dom and Babel libraries from unpkg -->
+        <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script> <!--Note:
+        development versions of react-->
+        <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+        <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+        
+        <script type="text/babel">
+            const rootElement = document.getElementById('root');
+
+
+            function App() {
+
+                const [users, setUsers] = React.useState([]);
+
+                const [username, setUsername] = React.useState('');
+
+                const addUser = () => {
+                    event.preventDefault();
+                    if (username === "") {
+                        alert("Please enter a username");
+                        }
+                    else {
+                        axios.post('http://localhost:3000/api/users/', {
+                            username: username
+                        })
+                            .then(() => location.reload())
+                    }           
+                }
+
+                const deleteUser = (user) => {
+                    axios.delete(`http://localhost:3000/api/users/${user.user_id}`)
+                        .then((response) => {
+                            setUsers(users.filter((u) => u.user_id !== user.user_id));
+                        })
+                    }
+
+                const updateUsernameState = (event) => {
+                    setUsername(event.target.value);
+                }
+
+                React.useEffect(() => {
+                    const getUsers = () => {
+                        axios.get('http://localhost:3000/api/users/')
+                            .then((response) => {
+                                setUsers(response.data);
+                                console.log(response.data);
+                            })
+                            .catch((error) => {
+                                console.error('Error fetching data: ', error);
+                            });
+                    }
+                    getUsers();
+                }, []);
+
+                const list_of_users = () => {
+                    // workaround for map not working on state lists in render,
+                    // here we explicitly call it when ever render is called
+                    return users.map((user) =>
+                        <li key={user.user_id}>
+                            <p>
+                                {user.username}
+                                <button onClick={() => deleteUser(user)}>Delete</button>
+                            </p>
+                        </li>)
+                }
+
+                const UserList = () => {
+                    return (
+                        <div>
+                            <h1>Users</h1>
+                            <ul>
+                                {list_of_users()}
+                            </ul>
+                        </div>
+                    );
+                }
+
+                return (
+                    <div>
+                        <UserList />
+                        <h2>Add User</h2>
+                        <form onSubmit={addUser}>
+                            <input type="text" value={username} onChange={updateUsernameState} />
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<App />, rootElement);
+        </script>
+    </body>
+</html>
