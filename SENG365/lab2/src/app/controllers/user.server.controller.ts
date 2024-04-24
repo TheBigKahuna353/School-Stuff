@@ -11,6 +11,7 @@ const list = async (req: Request, res: Response): Promise<void> => {
         const userList = await users.getAll();
         res.status(200).send(userList);
     } catch (err) {
+        Logger.error(`Error getting users: ${err}`);
         res.status(500).send(`Error getting users: ${err}`);
     }
 };

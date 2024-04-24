@@ -46,6 +46,7 @@ const list = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(200).send(userList);
     }
     catch (err) {
+        logger_1.default.error(`Error getting users: ${err}`);
         res.status(500).send(`Error getting users: ${err}`);
     }
 });
