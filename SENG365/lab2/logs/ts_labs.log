@@ -857,3 +857,137 @@
 2024-04-25 01:32:04:324 [32minfo[39m: [32mGetting all users from the database[39m
 2024-04-25 01:32:05:325 [35mhttp[39m: [35mGET all users[39m
 2024-04-25 01:32:05:325 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:32:16:3216 [35mhttp[39m: [35mPUT user with id 3 and username cool_guy[39m
+2024-04-25 01:32:16:3216 [32minfo[39m: [32mUpdating user in the database[39m
+2024-04-25 01:32:41:3241 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:32:41:3241 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:32:57:3257 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:32:57:3257 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:33:01:331 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:33:01:331 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:33:58:3358 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:33:58:3358 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:34:14:3414 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:34:14:3414 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:34:58:3458 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:34:58:3458 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:34:59:3459 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:34:59:3459 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:01:351 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:01:351 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:04:354 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:04:354 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:15:3515 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:15:3515 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:22:3522 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:22:3522 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:26:3526 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:26:3526 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:28:3528 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:28:3528 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:35:32:3532 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:35:32:3532 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:13:3613 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:13:3613 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:20:3620 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:20:3620 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:23:3623 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:23:3623 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:24:3624 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:24:3624 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:29:3629 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:29:3629 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:34:3634 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:34:3634 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:42:3642 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:42:3642 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:36:52:3652 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:36:52:3652 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:37:00:370 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:37:00:370 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:37:20:3720 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:37:20:3720 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:38:57:3857 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:38:57:3857 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:39:04:394 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:39:04:394 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:39:14:3914 [35mhttp[39m: [35mPOST user with username TheBigKahuna[39m
+2024-04-25 01:39:14:3914 [32minfo[39m: [32mInserting user with username TheBigKahuna into the database[39m
+2024-04-25 01:40:07:407 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:40:07:407 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:40:49:4049 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:40:49:4049 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:41:12:4112 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:41:12:4112 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:41:16:4116 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:41:16:4116 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:41:21:4121 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:41:21:4121 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:41:52:4152 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:41:52:4152 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:42:12:4212 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:42:12:4212 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:42:14:4214 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:42:14:4214 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:42:16:4216 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:42:16:4216 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:42:23:4223 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:42:23:4223 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:16:4416 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:16:4416 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:19:4419 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:19:4419 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:21:4421 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:21:4421 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:31:4431 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:31:4431 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:35:4435 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:35:4435 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:38:4438 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:38:4438 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:44:46:4446 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:44:46:4446 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:17:4517 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:17:4517 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:18:4518 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:18:4518 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:19:4519 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:19:4519 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:24:4524 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:24:4524 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:39:4539 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:39:4539 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:49:4549 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:49:4549 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:45:59:4559 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:45:59:4559 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:46:10:4610 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:46:10:4610 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:46:10:4610 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:46:10:4610 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:46:10:4610 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:46:10:4610 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:46:15:4615 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:46:15:4615 [32minfo[39m: [32mGetting all users from the database[39m
+2024-04-25 01:46:23:4623 [35mhttp[39m: [35mGET all users[39m
+2024-04-25 01:46:23:4623 [32minfo[39m: [32mGetting all users from the database[39m
