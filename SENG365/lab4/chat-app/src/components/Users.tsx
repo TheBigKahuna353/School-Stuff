@@ -147,15 +147,19 @@ const Users = () => {
         )
     }
 
-    const adduser = () => {
+    const adduser = (e: React.FormEvent<HTMLFormElement>) => {
+        console.log("adding user")
         const element = document.getElementById('closeButton') as HTMLElement;
+        console.log(element)
         simulateMouseClick(element);
+        e.preventDefault();
         const username = (document.getElementById('addUsername') as HTMLInputElement).value;
         axios.post('http://localhost:3000/api/users', {
             username: username
         })
             .then((response) => {
-                const new_user = {username: username, user_id: response.data} as User
+                const new_user = {username: username, user_id: response.data.user_id} as User
+                console.log(new_user)
                 setUsers([...users, new_user])
             }, (error) => {
                 setErrorFlag(true)
@@ -171,12 +175,12 @@ const Users = () => {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="addUserModalLabel">Add User</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close" id='closeButton'>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <form onSubmit={(e) => adduser} >
+                            <form onSubmit={adduser} >
                                 <div className="form-group">
                                     <label htmlFor="username">Username</label>
                                     <input type="text" className="form-control" id="addUsername" name="username" />
