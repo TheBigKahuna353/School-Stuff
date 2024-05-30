@@ -49,7 +49,7 @@ This strategy pattern is used in the Super Auto Pets app to:
 
 #### Name of UML Class diagram attached
 
-sap-strategy-domain.png
+[sap-strategy-domain.png](diagrams/sap-strategy-domain.png)
 
 #### Mapping to GoF pattern elements
 
@@ -76,7 +76,7 @@ This factory method pattern is used in the Super Auto Pets app to:
 
 #### Name of UML Class diagram attached
 
-sap-factory-domain.png
+[sap-factory-domain.png](diagrams/sap-factory-domain.png)
 
 
 #### Mapping to GoF pattern elements
@@ -105,7 +105,7 @@ This Iterator pattern is used in the Super Auto Pets app to:
 
 #### Name of UML Class diagram attached
 
-sap-Iterator-domain.png
+[sap-Iterator-domain.png](diagrams/sap-Iterator-domain.png)
 
 #### Mapping to GoF pattern elements
 
@@ -121,34 +121,36 @@ sap-Iterator-domain.png
 
 ### Name of file of full UML Class diagram attached
 
-**YOUR ANSWER**
+[sap-domain-all.png](diagrams/sap-domain-all.png)
 
 ## Task 3 - Implement new feature
 
 ### What pattern fulfils the need for the feature?
 
-**YOUR ANSWER**
+Memento
 
 ### What is its goal and why is it needed here?
 
-**YOUR ANSWER**
+The Memento design pattern stores the state of each team each round allowing the user to undo and redo rounds
 
 ### Name of UML Class diagram attached
 
-**YOUR ANSWER**
+[sap-memento-domain.png](diagrams\sap-memento-domain.png)
 
 ### Mapping to GoF pattern elements
 
 | GoF element | Code element |
 | ----------- | ------------ |
-|             |              |
+| Originator  | BattleRunner |
+|   Memento   | BattleMemento|
+|  Caretaker  |  GameInvoker |
 
 ## Task 4 - BONUS - Acceptance tests for Task 4
 
 ### Feature file (Cucumber Scenarios)
 
-**NAME OF FEATURE FILE**
+[BattleFeature](app\src\test\resources\uc\seng301\petbattler\asg4\cucumber\u5-battle.feature)
 
 ### Java class implementing the acceptance tests
 
-**NAME OF JAVA FILE**
+[Battlefeature.java](app\src\test\java\uc\seng301\petbattler\asg4\cucumber\step_definitions\BattleFeature.java)

@@ -47,4 +47,9 @@ public class TeamList extends ArrayList<GamePet> implements Team {
         return new ReversedTeam(this);
     }
 
+    @Override
+    public Team clone() {
+        return new TeamList(this);
+    }
+
 }

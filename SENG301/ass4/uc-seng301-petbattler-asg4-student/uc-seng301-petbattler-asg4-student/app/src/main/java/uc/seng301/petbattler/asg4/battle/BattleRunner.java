@@ -13,8 +13,9 @@ import java.util.stream.Collectors;
 public class BattleRunner {
     private final CommandLineInterface cli;
     private final BattlePrinter battlePrinter;
-    private final Team leftTeam;
-    private final Team rightTeam;
+    private Team leftTeam;
+    private Team rightTeam;
+    private final GameInvoker gameInvoker = new GameInvoker();
 
     /**
      * Create a new BattleHelper object and run a battle between two teams
@@ -39,6 +40,7 @@ public class BattleRunner {
         battlePrinter.printBattleSnapshot(leftTeam, rightTeam);
         cli.printLine("press enter to continue");
         cli.getNextLine();
+        gameInvoker.saveState(this);
         boolean teamHasLost = false;
         int roundCounter = 0;
         while (!teamHasLost) {
@@ -62,16 +64,15 @@ public class BattleRunner {
                     switch (input) {
                         case "" -> gettingInput = false;
                         case "undo" -> {
-                            // todo: implement undo functionality
-                            cli.printLine("Not implemented!");
+                            gameInvoker.undo(this);
                         }
                         case "redo" -> {
-                            // todo: implement redo functionality
-                            cli.printLine("Not implemented!");
+                            gameInvoker.redo(this);
                         }
                         default -> cli.printLine("Invalid option");
                     }
                 }
+                gameInvoker.saveState(this);
             }
         }
 
@@ -128,6 +129,15 @@ public class BattleRunner {
             gameIsOver = true;
         }
         return gameIsOver;
+    }
+
+    public BattleMemento saveStateToMemento() {
+        return new BattleMemento(leftTeam, rightTeam);
+    }
+
+    public void getStateFromMemento(BattleMemento memento) {
+        leftTeam = memento.getLeftTeam();
+        rightTeam = memento.getRightTeam();
     }
 
 }

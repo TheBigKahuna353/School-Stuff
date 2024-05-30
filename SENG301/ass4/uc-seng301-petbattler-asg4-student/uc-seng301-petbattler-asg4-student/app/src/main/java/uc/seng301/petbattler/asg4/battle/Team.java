@@ -26,4 +26,10 @@ public interface Team extends List<GamePet> {
      * @return reverse-ordered pets
      */
     TeamOrdering getReversedTeam();
+
+    /**
+     * Clone the team
+     * @return deep copy of team
+     */
+    Team clone();
 }
