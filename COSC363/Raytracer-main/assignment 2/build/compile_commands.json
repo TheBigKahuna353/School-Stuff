@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/RayTracer.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/RayTracer.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/RayTracer.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/mandlebrot.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/mandlebrot.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/mandlebrot.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/algebra.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/algebra.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/algebra.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/Ray.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/Ray.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/Ray.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/world.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/world.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/world.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/SceneObject.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/SceneObject.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/SceneObject.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/Sphere.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/Sphere.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/Sphere.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/Torus.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/Torus.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/Torus.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/Plane.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/Plane.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/Plane.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/TextureBMP.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/TextureBMP.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/TextureBMP.cpp"
+},
+{
+  "directory": "/csse/users/jwi179/Documents/COSC363/ass2/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/RayTracer.out.dir/Csg.cpp.o -c /csse/users/jwi179/Documents/COSC363/ass2/Csg.cpp",
+  "file": "/csse/users/jwi179/Documents/COSC363/ass2/Csg.cpp"
+}
+]
